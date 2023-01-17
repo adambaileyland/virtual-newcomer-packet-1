@@ -1,0 +1,59 @@
+<section class="tiles">
+
+{% for post in site.posts limit:site.front-page-posts %}
+	<article class="style{{ forloop.index | plus:1 }}">
+		<span class="image">
+			<img src="{{ site.url }}{{ site.baseurl }}/images/pic01.jpg" alt="" />
+		</span>
+		<a href="{{ post.url | prepend:site.baseurl | prepend:site.url }}">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% if post.title == "Is A.A. For You?" %}
+			<a href="https://www.aa.org/pages/en_US/is-aa-for-you-twelve-questions-only-you-can-answer">
+				<h2>{{ post.title }}</h2>
+			</a>
+		{% endif %}
+		{% if post.title == "Questions & Answers on Sponsorship" %}
+		<a href="https://www.aa.org/assets/en_US/p-15_Q%26AonSpon.pdf">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "A Newcomer Asks" %}
+		<a href="https://www.aa.org/assets/en_US/p-24_anewcomerask.pdf">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "A Brief Guide to Alcoholics Anonymous" %}
+		<a href="https://www.aa.org/assets/en_US/p-42_abriefguidetoaa.pdf">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "Information on Alcoholics Anonymous" %}
+		<a href="https://www.aa.org/assets/en_US/f-2_InfoonAA.pdf">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "The Big Book" %}
+		<a href="https://www.aa.org/pages/en_US/alcoholics-anonymous">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "Twelve Steps and Twelve Traditions" %}
+		<a href="https://www.aa.org/pages/en_US/twelve-steps-and-twelve-traditions">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "This is A.A." %}
+		<a href="https://www.aa.org/assets/en_US/p-1_thisisaa1.pdf">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+		{% if post.title == "Meeting Guide" %}
+		<a href="https://www.aa.org/pages/en_US/meeting-guide">
+			<h2>{{ post.title }}</h2>
+		</a>
+		{% endif %}
+	</article>
+{% endfor %}
+
+</section>

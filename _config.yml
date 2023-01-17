@@ -10,8 +10,8 @@ title: Virtual Newcomer Packet
 email: adambaileyland@gmail.com
 description: A virtual newcomer packet.
 # baseurl: /virtual-newcomer-packet
-baseurl: /
-#baseurl: "" # toggle local build
+# baseurl: /
+baseurl: "" # toggle local build
 url: "" # the base hostname & protocol for your site
 
 # Logo settings
@@ -26,3 +26,19 @@ markdown: kramdown
 
 # Layout settings
 home-link-in-menu: yes
+
+# Plugins
+plugins:
+  - jekyll-multiple-languages-plugin
+
+#Leave English in base root
+default_locale_in_subfolder: true
+
+# Languages
+languages: ["es"]
+
+#Leave English in base root
+default_locale_in_subfolder: true
+
+# Exclude this stuff from other languages
+exclude_from_localizations: ["javascript", "css", "scripts"]
